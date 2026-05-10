@@ -1,32 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perceev</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #2d2c2e;
+      background: #eefdee;
+      color: #2d2c2e;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      height: 100vh;
+    .page {
+      max-width: 1440px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #eefdee;
     }
 
     img {
-      max-width: 90%;
+      max-width: 100%;
+      display: block;
+    }
+
+    .top-header {
+      padding: 24px 8%;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 8% 50px;
+    }
+
+    .hero-title {
+      max-width: 560px;
+    }
+
+    .hero-text {
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 1.5;
+      max-width: 520px;
+    }
+
+    .ticker {
+      background: #101011;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      padding: 80px 8%;
+      background: white;
+    }
+
+    .section.alt {
+      background: #eefdee;
+    }
+
+    .feature-copy {
+      max-width: 620px;
+    }
+
+    .prefooter {
+      padding: 70px 8%;
+      background: white;
+    }
+
+    .footer {
+      background: #1b1b1d;
+    }
+
+    @media (max-width: 800px) {
+      .top-header {
+        padding: 20px 16px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 30px 16px 40px;
+        gap: 24px;
+      }
+
+      .hero-title {
+        max-width: 100%;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .ticker {
+        overflow: hidden;
+      }
+
+      .ticker img {
+        width: 1200px;
+        max-width: none;
+      }
+
+      .section,
+      .section.alt {
+        grid-template-columns: 1fr;
+        padding: 55px 16px;
+        gap: 28px;
+      }
+
+      .section.mobile-reverse .feature-copy {
+        order: 2;
+      }
+
+      .section.mobile-reverse .feature-image {
+        order: 1;
+      }
+
+      .prefooter {
+        padding: 40px 16px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <main class="page">
 
-  <img src="White Logo.png" alt="Perceev">
+    <header class="top-header">
+      <img src="perceev header_image.png" alt="Perceev header">
+    </header>
 
+    <section class="hero">
+      <div>
+        <img class="hero-title" src="The Digital Stadium For Endurance Sports.png" alt="The Digital Stadium For Endurance Sports">
+        <p class="hero-text">
+          Step into the digital stadium to complete your race day experience.
+        </p>
+      </div>
+
+      <div>
+        <img src="Digital stadium with hand.png" alt="Digital stadium in your hand">
+      </div>
+    </section>
+
+    <div class="ticker">
+      <img src="TickerTape.png" alt="Share your photos, event information, follow athletes, live results, course routes, replay your race">
+    </div>
+
+    <section class="section">
+      <div class="feature-image">
+        <img src="Results Leaderboard image.png" alt="Result leaderboard">
+      </div>
+
+      <div class="feature-copy">
+        <img src="results leaderboard copy.png" alt="Result leaderboard description">
+      </div>
+    </section>
+
+    <section class="section alt mobile-reverse">
+      <div class="feature-copy">
+        <img src="UGC Copy.png" alt="UGC custom stickers description">
+      </div>
+
+      <div class="feature-image">
+        <img src="UGC Image.png" alt="UGC custom stickers">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="feature-image">
+        <img src="Pushnotification image.png" alt="Push notifications">
+      </div>
+
+      <div class="feature-copy">
+        <img src="PushNotification Copy.png" alt="Push notifications description">
+      </div>
+    </section>
+
+    <section class="prefooter">
+      <img src="Pre-Footer .png" alt="Only you can determine what's next">
+    </section>
+
+    <footer class="footer">
+      <img src="Footer.png" alt="Copyright 2024 Perceev. All Right Reserved.">
+    </footer>
+
+  </main>
 </body>
 </html>
