@@ -82,6 +82,42 @@
       background: #1b1b1d;
     }
 
+    .video-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .video-container img {
+      width: 100%;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+
+      background: rgba(0,0,0,0.75);
+      color: white;
+
+      font-size: 42px;
+      line-height: 90px;
+      text-align: center;
+
+      transition: 0.3s ease;
+    }
+
+    .video-container:hover .play-button {
+      background: #39ff14;
+      color: black;
+    }
+
     @media (max-width: 800px) {
       .top-header {
         padding: 20px 16px;
@@ -128,6 +164,13 @@
       .prefooter {
         padding: 40px 16px;
       }
+
+      .play-button {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 32px;
+      }
     }
   </style>
 </head>
@@ -142,13 +185,20 @@
     <section class="hero">
       <div>
         <img class="hero-title" src="The Digital Stadium For Endurance Sports.png" alt="The Digital Stadium For Endurance Sports">
+
         <p class="hero-text">
           Step into the digital stadium to complete your race day experience.
         </p>
       </div>
 
-      <div>
-        <img src="Digital stadium with hand.png" alt="Digital stadium in your hand">
+      <div class="video-container">
+        <a href="https://www.veed.io/edit/73298167-27ca-4dc2-b997-a3a597bc8de6/video" target="_blank">
+
+          <img src="Digital stadium with hand.png" alt="Digital stadium in your hand">
+
+          <div class="play-button">▶</div>
+
+        </a>
       </div>
     </section>
 
